@@ -477,50 +477,41 @@ section {
   flex-shrink: 0;
 }
 .socials {
-  display: flex;
-  gap: 10px;
-  margin-top: 22px;
-}
-.socials a {
-  width: 39px;
-  height: 39px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  color: #e4dfff;
-  background: #ffffff08;
-}
-.socials a:hover {
-  background: #ffffff18;
-}
-
-.socials {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 14px;
+  margin-top: 22px;
+  width: 100%;
 }
 
 .socials a {
   width: 48px;
   height: 48px;
-  display: flex;
+  flex: 0 0 48px;
+
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  color: white;
+  color: #e4dfff;
   font-size: 24px;
   text-decoration: none;
 
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--line);
   border-radius: 14px;
 
   backdrop-filter: blur(12px);
-  transition: 0.3s ease;
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: all 0.3s ease;
 }
 
 .socials a:hover {
-  color: white;
+  color: #ffffff;
   background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(225, 48, 108, 0.3);
